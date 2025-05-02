@@ -1,0 +1,95 @@
+.tabs-container {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Tab header section */
+.tabs-header {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #888; /* lighter for unselected tabs */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: font-weight 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    font-weight: bold;
+    color: #000; /* black for selected tab */
+    border-bottom: 2px solid black;
+}
+
+/* Grid layout for tiles */
+.tabs-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+/* Tile styling (card) */
+.tile {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-10px); /* Move the tile slightly upwards */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+/* Tile image */
+.tile-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    transition: transform 0.3s ease; /* Add animation for the image */
+}
+
+.tile:hover .tile-image {
+    transform: scale(1.05); /* Slightly zoom in the image */
+}
+
+/* Tile title */
+.tile-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 1rem 0.25rem;
+    text-align: left;
+    color: #333;
+    height: 2.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Tile description */
+.tile-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 1rem;
+    text-align: left;
+    flex-grow: 1;
+    overflow: auto;
+}
