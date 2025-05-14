@@ -31,7 +31,7 @@ const Tabs: React.FC = () => {
               id: item.Id,
               image: item.Image,
               description: item.Description,
-            });2222222222222222222
+            });
           }
         });
         setTabsData(Tabs);
