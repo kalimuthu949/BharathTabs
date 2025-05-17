@@ -8,7 +8,7 @@ import { set } from "@microsoft/sp-lodash-subset";
 const Tabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [tabsData, setTabsData] = useState([]);
-
+  console.log(tabsData);
   useEffect(() => {
     const fetchData = async () => {
       let Tabs=[];
